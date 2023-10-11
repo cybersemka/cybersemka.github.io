@@ -5,39 +5,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Домашняя страница</title>
-    <link href="https://fonts.googleapis.com/css2?family=Имя+шрифта:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1>Домашняя страница</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#">Главная</a>
-        <a href="#">Обо мне</a>
-        <a href="#">Проекты</a>
-        <a href="#">Контакты</a>
-    </nav>
+    <main>
+        <section class="content">
+            <h1>Добро пожаловать на нашу домашнюю страницу!</h1>
+            <p>Здесь вы можете найти полезную информацию о нашей компании и наших услугах.</p>
+            <img src="example.jpg" alt="Пример изображения">
+            <table>
+                <tr>
+                    <th>Заголовок 1</th>
+                    <th>Заголовок 2</th>
+                </tr>
+                <tr>
+                    <td>Ячейка 1</td>
+                    <td>Ячейка 2</td>
+                </tr>
+            </table>
 
-    <table>
-        <tr>
-            <th>Заголовок 1</th>
-            <th>Заголовок 2</th>
-        </tr>
-        <tr>
-            <td>Ячейка 1</td>
-            <td>Ячейка 2</td>
-        </tr>
-        <tr>
-            <td>Ячейка 3</td>
-            <td>Ячейка 4</td>
-        </tr>
-    </table>
+            <div class="contact-form">
+                <h2>Форма обратной связи</h2>
+                <div class="form-group">
+                    <label for="full-name">ФИО:</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Откуда узнали о нас:</label>
+                    <label><input type="radio" name="source" value="website"> Веб-сайт</label>
+                    <label><input type="radio" name="source" value="friends"> Друзья</label>
+                </div>
+                <div class="form-group">
+                    <label for="type">Тип обращения:</label>
+                    <select id="type" name="type" required>
+                        <option value="complaint">Жалоба</option>
+                        <option value="suggestion">Предложение</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Текст сообщения:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="attachment">Вложения:</label>
+                    <input type="file" id="attachment" name="attachment">
+                </div>
+                <div class="form-group">
+                    <label><input type="checkbox" required> Даю согласие на обработку персональных данных</label>
+                </div>
+                <button type="submit">Отправить</button>
+            </div>
+
+            <div class="login-container">
+                <form class="login-form" method="POST" action="https://httpbin.org/post">
+                    <h2>Вход в систему</h2>
+                    <div class="form-group">
+                        <label for="login">Логин:</label>
+                        <input type="text" id="login" name="login" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Пароль:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label><input type="checkbox" name="remember"> Запомнить меня</label>
+                    </div>
+                    <button type="submit">Войти</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>Контактная информация / Копирайт © 2023</p>
+        <div class="contact-info">
+            <p>Наш адрес: Москва</p>
+            <p>Телефон: +7 (123) 456-7890</p>
+            <p>Email: kishievsemka@gmail.com</p>
+        </div>
+        <p>&copy; 2023 CYBERSEMKA. Все права защищены.</p>
     </footer>
 </body>
 
