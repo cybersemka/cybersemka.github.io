@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CYBERSEMKA</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="print.css" media="print">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
@@ -14,30 +13,33 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О нас</a></li>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Контакты</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="container">
-            <aside class="sidebar">
-                <h2>Сайдбар</h2>
-                <ul>
-                    <li><a href="#">Ссылка 1</a></li>
-                    <li><a href="#">Ссылка 2</a></li>
-                </ul>
-            </aside>
-            <section class="content">
-                <h1>Добро пожаловать на наш сайт!</h1>
-                <p>Мы предоставляем уникальные услуги и продукты для вашего комфорта и удовлетворения.</p>
-                <p>Узнайте больше, перейдя на страницу <a href="about.html">"О нас"</a>.</p>
-            </section>
+            <div class="contact-form">
+                <h2>Форма обратной связи</h2>
+            </div>
+            <div class="login-container">
+                <form class="login-form" method="POST" action="https://httpbin.org/post">
+                    <h2>Вход в систему</h2>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
+        <div class="contact-info">
+            <p>Наш адрес: Москва</p>
+            <p>Телефон: +7 (999) 971 88-15</p>
+            <p>Email: kishievsemka2@gmail.com</p>
+        </div>
         <p>&copy; 2023 CYBERSEMKA. Все права защищены.</p>
     </footer>
 </body>
