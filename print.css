@@ -1,24 +1,7 @@
+nav, .sidebar {
+    display: none;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-}
-
-header, footer, nav {
-    display: none;
-}
-
-.container {
-    display: block;
-    width: 100%;
-}
-
-.sidebar {
-    display: none;
-}
-
-.content {
-    width: 100%;
-}
-
-button, input[type="submit"], input[type="file"], input[type="checkbox"], input[type="radio"] {
-    display: none;
+    font-size: 16px;
 }
