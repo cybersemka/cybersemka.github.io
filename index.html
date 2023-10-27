@@ -4,43 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CYBERSEMKA</title>
+    <title>Кулинарный сайт</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="print.css" media="print">
 </head>
 
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="recipes.html">Рецепты</a></li>
+                <li><a href="about.html">О нас</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="container">
-            <div class="contact-form">
-                <h2>Форма обратной связи</h2>
-            </div>
-            <div class="login-container">
-                <form class="login-form" method="POST" action="https://httpbin.org/post">
-                    <h2>Вход в систему</h2>
-                </form>
-            </div>
+    <main class="container">
+        <section class="main-content">
+            <h1>Добро пожаловать на кулинарный сайт!</h1>
+            <p>Изучайте новые рецепты и улучшайте свои кулинарные навыки.</p>
         </section>
+        <aside class="sidebar">
+            <h2>Популярные рецепты</h2>
+            <ul>
+                <li><a href="recipes.html#recipe1">Рецепт Цезаря</a></li>
+                <li><a href="recipes.html#recipe2">Рецепт Борща</a></li>
+                <li><a href="recipes.html#recipe3">Рецепт Курицы с картофелем</a></li>
+            </ul>
+        </aside>
     </main>
 
     <footer>
-        <div class="contact-info">
-            <p>Наш адрес: Москва</p>
-            <p>Телефон: +7 (999) 971 88-15</p>
-            <p>Email: kishievsemka2@gmail.com</p>
-        </div>
-        <p>&copy; 2023 CYBERSEMKA. Все права защищены.</p>
+        <p>&copy; 2023 Кулинарный сайт от Сеймура. Все права защищены.</p>
     </footer>
 </body>
 
