@@ -1,43 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" class="h-100" style="overflow-x: hidden">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кулинарный сайт</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="print.css" media="print">
+    <meta name="viewport">
+    <meta charset="utf-8" content="width=device-width, initial-scale=1.0">
+    <title>Brand Name</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        /* Добавленные стили */
+        body {
+            font-family: 'Verdana', sans-serif;
+            background: url('oboi2.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: #3498db; /* Изменен цвет шапки на голубой */
+            color: #fff; /* Изменен цвет текста в шапке на белый */
+        }
+
+        h2,
+        h3,
+        h4,
+        p {
+            color: #333; /* Изменен цвет текста на темно-серый */
+        }
+
+        table {
+            background-color: #ecf0f1; /* Изменен цвет фона таблицы на светло-серый */
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: 0;
+            padding-bottom: 75%; /* Задана пропорция для контейнера с картой */
+            position: relative;
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="recipes.html">Рецепты</a></li>
-                <li><a href="about.html">О нас</a></li>
-            </ul>
+<body class="d-flex flex-column h-100 bg-light">
+    <header class="bg-gradient bg-primary"> <!-- Изменен класс и цвет фона -->
+        <nav class="navbar navbar-expand-xl">
+            <div class="container">
+                <a class="navbar-brand">
+                    <img src="brand.jpg" alt="Brand Name" width="50">
+                </a>
+                <p class="navbar-nav px-3">Brand Name</p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item px-3"><a class="nav-link" href="profile.html">Личный кабинет</a></li>
+                        <li class="nav-item px-3"><a class="nav-link" href="#about">О нас</a></li>
+                        <li class="nav-item px-3"><a class="nav-link" href="#route">Маршруты</a></li>
+                        <li class="nav-item px-3"><a class="nav-link" href="#contacts">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main class="container">
-        <section class="main-content">
-            <h1>Добро пожаловать на кулинарный сайт!</h1>
-            <p>Изучайте новые рецепты и улучшайте свои кулинарные навыки.</p>
-        </section>
-        <aside class="sidebar">
-            <h2>Популярные рецепты</h2>
-            <ul>
-                <li><a href="recipes.html#recipe1">Рецепт 1</a></li>
-                <li><a href="recipes.html#recipe2">Рецепт 2</a></li>
-                <li><a href="recipes.html#recipe3">Рецепт 3</a></li>
-            </ul>
-        </aside>
-    </main>
+    <section class="text-emphasis-dark"> <!-- Изменен класс и цвет текста -->
+        <div class="container d-flex my-4">
+            <h2 id="about" class="text-center col-md-6">О нас</h2> <!-- Изменен класс и цвет текста -->
+        </div>
+    </section>
+    
+    <section class="container-fluid d-flex">
+        <div class="container d-flex justify-content-around col-md-6 px-3">
+            <div class="col-md-4"> <!-- Увеличен размер блока компании и изменен текст заголовка -->
+                <h3>О нас</h3>
+                <p>С 2007 года Brand Name создает запоминающиеся впечатления, предоставляя захватывающие и живописные экскурсии по лучшим местам Москвы!</p>
+            </div>
+            <div class="col-md-4"> <!-- Изменен размер блока директора -->
+                <h3 class="text-nowrap">От директора</h3>
+                <p>Мы гордимся тем, что мы всегда заботимся о наших клиентах. Не стесняйтесь задавать любые вопросы - мы всегда готовы оказать помощь.</p>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="container d-flex justify-content-around col-md-6">
+            <div class="col-md-4">
+                <h3 class="text-nowrap">О маршрутах</h3>
+                <p>У нас есть разнообразные маршруты, чтобы удовлетворить предпочтения каждого.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Проф-гиды</h3>
+                <p>Наши экскурсоводы - опытные специалисты, обеспечивающие ваше приятное путешествие!</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Ещё </h3>
+                <p>Мы осуществляем экскурсии по самым захватывающим местам Москвы, при этом наши гиды мастерски рассказывают об истории города с увлекательностью.</p>
+            </div>
+        </div>
+    </section>
+    
 
-    <footer>
-        <p>&copy; 2023 Cloud Monet Кулинарный сайт. Все права защищены.</p>
+    <section>
+        <div class="container d-flex my-3">
+            <h3 id="route" class="col-md-6 text-start">Выбор маршрута</h3>
+            <h3 class="col-md-6 text-end">Интерактивная карта</h3>
+        </div>
+        <div class="container d-flex justify-content-center">
+            <table class="my-3 border border-dark col-9"> <!-- Изменен цвет границ таблицы на темно-серый -->
+                <thead>
+                    <tr>
+                        <th class="p-3 border border-dark">Имя</th>
+                        <th class="p-3 border border-dark">Описание</th>
+                        <th class="p-3 border border-dark">Интересные места</th> <!-- Изменен текст заголовка -->
+                    </tr>
+                </thead>
+                <tbody class="routetable">
+                    <!-- Здесь можно добавить строки с данными маршрутов -->
+                </tbody>
+            </table>
+            <div class="col-3 mx-3 mt-3">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8979.529596680828!2d37.61382389567808!3d55.76054507460547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a50b315e573%3A0xa886bf5a3d9b2e68!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0JrRgNC10LzQu9GM!5e0!3m2!1sru!2sru!4v1704552484106!5m2!1sru!2sru"
+                    width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    class="border border-black"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-3">
+        <h3>Поиск гидов</h3>
+        <form class="mb-3">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="languageFilter" class="form-label">Язык</label>
+                    <select class="form-select" id="languageFilter">
+                        <option value="all">Все языки</option>
+                        <option value="Английский">Английский</option>
+                        <option value="Французский">Французский</option>
+                        <!-- Добавьте другие языки по аналогии -->
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="minExperienceFilter" class="form-label">Мин. опыт работы (лет)</label>
+                    <input type="number" class="form-control" id="minExperienceFilter" placeholder="Мин. опыт">
+                </div>
+                <div class="col-md-4">
+                    <label for="maxExperienceFilter" class="form-label">Макс. опыт работы (лет)</label>
+                    <input type="number" class="form-control" id="maxExperienceFilter" placeholder="Макс. опыт">
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary mt-2" onclick="searchGuides()">Искать</button>
+        </form>
+    </section>
+
+    <section class="container my-3">
+        <h3>Создать новую заявку</h3>
+        <form id="createRequestForm">
+            <div class="mb-3">
+                <label for="routeSelect" class="form-label">Выберите маршрут</label>
+                <select class="form-select" id="routeSelect" required>
+                    <!-- Здесь добавьте опции для выбора маршрута -->
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="guideSelect" class="form-label">Выберите гида</label>
+                <select class="form-select" id="guideSelect" required>
+                    <!-- Здесь добавьте опции для выбора гида -->
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="dateInput" class="form-label">Выберите дату и время</label>
+                <input type="datetime-local" class="form-control" id="dateInput" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Создать заявку</button>
+        </form>
+    </section>
+
+    <footer class="footer mt-auto py-3 bg-secondary bg-gradient"> <!-- Изменен цвет фона футера и текста -->
+        <div class="container text-light">
+            <h3 id="contacts">Наши контакты</h3>
+            <ul class="list-unstyled row">
+                <li class="col-md-3 text-start">Телефон: +7 (999) 971 88-15<br>E-Mail: semkarulitkishiev.com</li>
+                <li class="col-md-9 text-end">
+                    <!-- Добавьте дополнительную информацию о контактах по желанию -->
+                </li>
+            </ul>
+        </div>
     </footer>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
