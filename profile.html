@@ -1,1 +1,285 @@
 
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+
+        html, body {
+            height: 100%; 
+            margin: 0;  
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #content-wrap {
+            flex: 1 0 auto; 
+        }
+
+        .footer {
+            background-color: #6c757d; 
+            color: white; 
+            flex-shrink: 0; 
+        }
+        body {
+            font-family: 'Verdana', sans-serif;
+            background: url('oboi3.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        table {
+            background-color: #ecf0f1; 
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: 0;
+            padding-bottom: 75%; 
+            position: relative;
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .footer {
+    background-color: #f0f5e9; 
+    color: #fff; 
+}
+
+.footer h3 {
+    color: #fff;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer form {
+    margin-top: 20px;
+}
+
+        .round {
+    border-radius: 100px; 
+    border: 3px solid black; 
+    box-shadow: 0 0 7px #666; 
+   }
+    </style>
+</head>
+
+<body>
+    <header class="bg-gradient bg-primary">
+      <nav class="navbar navbar-expand-xl">
+          <div class="container">
+              <a class="navbar-brand">
+                <img src="brand.jpg" alt="Brand Name" width="70" class="round">
+              </a>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <li class="nav-item px-3"><a class="btn btn-outline-info" href="index.html">Brand Name</a></li>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ms-auto">
+                    <li class="nav-item px-3"><a class="btn btn-outline-info" href="index.html">Главная</a></li>
+                        <li class="nav-item px-3"><a class="btn btn-outline-info" href="profile.html">Личный кабинет</a></li>
+                        <li class="nav-item px-3"><a class="btn btn-outline-info" href="route.html">Маршруты</a></li>
+                        <li class="nav-item px-3"><a class="btn btn-outline-info" href="#contacts">Контакты</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  </header>
+
+  <div class="container my-5" id="content-wrap">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Номер заявки</th>
+                <th scope="col">Маршрут</th>
+                <th scope="col">Дата</th>
+                <th scope="col">Стоимость</th>
+                <th scope="col">Действия</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">4213</th>
+                <td>Городские огни</td>
+                <td>2024-01-15</td>
+                <td>3000 руб.</td>
+                <td>
+                    <button class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#detailsModal">Подробнее</button>
+                    <button class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal">Редактировать</button>
+                    <button class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#deleteModal">Удалить</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailsModalLabel">Детали заявки</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Номер заявки: <span id="requestNumber"></span></p>
+                    <p>ФИО: <span id="fullName"></span></p>
+                    <p>Название маршрута: <span id="routeName"></span></p>
+                    <p>Дата и время: <span id="dateTime"></span></p>
+                    <p>Длительность: <span id="duration"></span></p>
+                    <p>ФИО гида: <span id="guideName"></span></p>
+                    <p>Дополнительные опции:
+                        <input type="checkbox" id="discount1" disabled> Скидка 1
+                        <input type="checkbox" id="discount2" disabled> Скидка 2
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        detailsModal.addEventListener('show.bs.modal', function (event) {
+
+            var button = event.relatedTarget; 
+            var data = button.closest('tr').getElementsByTagName('td');
+        
+            document.getElementById('requestNumber').textContent = data[0].textContent;
+            document.getElementById('fullName').textContent = "Имя Фамилия"; 
+            document.getElementById('routeName').textContent = data[1].textContent;
+            document.getElementById('dateTime').textContent = data[2].textContent;
+            document.getElementById('duration').textContent = "2 часа"; 
+            document.getElementById('guideName').textContent = "Имя Гида"; 
+
+            document.getElementById('discount1').checked = false;
+            document.getElementById('discount2').checked = false;
+        });
+        </script>
+
+
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Редактирование заявки</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Подтверждение удаления</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Вы уверены, что хотите удалить эту заявку?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-danger">Удалить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+var detailsModal = document.getElementById('detailsModal');
+var editModal = document.getElementById('editModal');
+var deleteModal = document.getElementById('deleteModal');
+
+detailsModal.addEventListener('show.bs.modal', function (event) {
+  var button = event.relatedTarget; 
+  var data = button.closest('tr').getElementsByTagName('td'); 
+
+  var detailsBody = detailsModal.querySelector('.modal-body');
+  detailsBody.innerHTML = 'Детальная информация о заявке:<br>';
+  detailsBody.innerHTML += 'Маршрут: ' + data[1].textContent + '<br>';
+  detailsBody.innerHTML += 'Дата: ' + data[2].textContent + '<br>';
+});
+
+editModal.addEventListener('show.bs.modal', function (event) {
+  var button = event.relatedTarget;
+  var data = button.closest('tr').getElementsByTagName('td'); 
+
+  var editBody = editModal.querySelector('.modal-body');
+  editBody.innerHTML = 'Редактирование заявки:<br>';
+  editBody.innerHTML += '<input type="text" value="' + data[1].textContent + '">'; 
+  editBody.innerHTML += '<input type="date" value="' + data[2].textContent + '">'; 
+  var editForm = editModal.querySelector('form');
+  editForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    editModal.modal('hide');
+  });
+});
+
+deleteModal.addEventListener('show.bs.modal', function (event) {
+
+  var button = event.relatedTarget; 
+  var data = button.closest('tr').getElementsByTagName('td'); 
+
+  var deleteBody = deleteModal.querySelector('.modal-body');
+  deleteBody.innerHTML = 'Вы уверены, что хотите удалить заявку:<br>';
+  deleteBody.innerHTML += 'Маршрут: ' + data[1].textContent + '<br>';
+  deleteBody.innerHTML += 'Дата: ' + data[2].textContent + '<br>';
+  var deleteButton = deleteModal.querySelector('.btn-danger');
+  deleteButton.addEventListener('click', function () {
+    deleteModal.modal('hide');
+  });
+});
+</script>
+
+<footer class="footer mt-auto py-5 bg-secondary">
+    <div class="container text-light">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Обратная связь</h3>
+                <ul class="list-unstyled">
+                    <li>1-Парковая, 13</li>
+                    <li>Телефон: +7 (999) 971 88-15</li>
+                    <li>E-Mail: kishievsemka2@gmail.com</li>
+                </ul>
+            </div>
+            <div class="col-md-8 text-end">
+                <h3>Подписаться на рассылку</h3>
+                <form class="row g-2">
+                    <div class="col-md-8">
+                        <input type="email" class="form-control" id="emailInput" placeholder="Введите ваш e-mail">
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-primary">Подписаться</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
