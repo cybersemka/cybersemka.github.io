@@ -1,1 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru" class="h-100" style="overflow-x: hidden">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Name</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background: url('oboi3.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: #00BFFF; 
+            color: #fff; 
+        }
+
+        h2,
+        h3,
+        h4,
+        p {
+            color: #333; 
+        }
+
+        table {
+            background-color: #ecf0f1; 
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: 0;
+            padding-bottom: 75%; 
+            position: relative;
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .guide-select-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            font-size: 14px;
+            line-height: 1.5;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .guide-select-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+    background-color: #f0f5e9; /* Цвет фона футера */
+    color: #fff; /* Цвет текста в футере */
+}
+
+.footer h3 {
+    color: #fff; /* Цвет заголовков в футере */
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer form {
+    margin-top: 20px;
+}
+
+        .round {
+    border-radius: 100px; 
+    border: 3px solid black; 
+    box-shadow: 0 0 7px #666; 
+   }
+    </style>
+    <button onclick="topFunction()" id="scrollTopBtn" title="Наверх">&#9650;</button>
+
+    <style>
+      #scrollTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-size: 20px;
+        border: none;
+        outline: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    </style>
+    
+    <script>
+      window.onscroll = function() {
+        scrollFunction();
+      };
+    
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("scrollTopBtn").style.display = "block";
+        } else {
+          document.getElementById("scrollTopBtn").style.display = "none";
+        }
+      }
+    
+
+      function topFunction() {
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0; 
+      }
+    </script>
+
+<body class="d-flex flex-column h-100 bg-light">
+    <header class="bg-gradient bg-primary"> 
+        <nav class="navbar navbar-expand-xl">
+            <div class="container">
+                <a class="navbar-brand">
+                    <img src="brand.jpg" alt="Brand Name" width="70" class="round" href="index.html">
+                </a>
+                <button type="button" class="btn btn-outline-info">Brand Name</button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item px-3"><a class="btn btn-outline-info" href="index.html">Главная</a></li>
+                        <li class="nav-item px-3"><a class="btn btn-outline-info" href="profile.html">Личный кабинет</a></li>
+                        <li class="nav-item px-3"><a class="btn btn-outline-info" href="route.html">Маршруты</a></li>
+                        <li class="nav-item px-3"><a class="btn btn-outline-info" href="#contacts">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="text-emphasis-dark"> 
+        <div class="container d-flex my-4">
+            <h2 id="about" class="text-center col-md-10">Немного о компании...</h2> 
+        </div>
+    </section>
+    
+    <section class="container-fluid d-flex">
+        <div class="container d-flex justify-content-around col-md-6 px-3">
+            <div class="col-md-4"> 
+                <h3>О нас</h3>
+                <p>С 2007 года Brand Name создает запоминающиеся впечатления, предоставляя захватывающие и живописные экскурсии по лучшим местам Москвы!</p>
+            </div>
+            <div class="col-md-4"> 
+                <h3 class="text-nowrap">От директора</h3>
+                <p>Мы гордимся тем, что мы всегда заботимся о наших клиентах. Не стесняйтесь задавать любые вопросы - мы всегда готовы оказать помощь.</p>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="container d-flex justify-content-around col-md-6">
+            <div class="col-md-2">
+                <h3 class="text-nowrap">О маршрутах</h3>
+                <p>У нас есть разнообразные маршруты, чтобы удовлетворить предпочтения каждого.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Проф-гиды</h3>
+                <p>Наши экскурсоводы - опытные специалисты, обеспечивающие ваше приятное путешествие!</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Ещё </h3>
+                <p>Мы осуществляем экскурсии по самым захватывающим местам Москвы, при этом наши гиды мастерски рассказывают об истории города с увлекательностью.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="col-md-10"id="map"></div>
+        <form id="addressForm">
+            <h2 id="about" class="text-center col-md-10">Введите адрес начальной точки:</h2>
+            <input type="text" id="addressInput" required class="mb-2">
+            <button type="submit" >Поиск</button>
+        </form>
+    </section><script type="text/javascript">
+        var map;
+    
+        DG.then(function () {
+            map = DG.map('map', {
+                center: [54.98, 82.89],
+                zoom: 13
+            });
+        });
+    </script>
+    <section><script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full">
+        <div id="map" style="width:500px; height:400px"></div>
+        
+    </script></section>
+    
+        <section class="container my-4">
+            <h2 class="mb-2">Карта Москвы</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8979.529596680828!2d37.61382389567808!3d55.76054507460547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a50b315e573%3A0xa886bf5a3d9b2e68!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0JrRgNC10LzQu9GM!5e0!3m2!1sru!2sru!4v1704552484106!5m2!1sru!2sru" width="100%" height="100" width= "200px" frameborder="0" style="border: 1px solid #e0e0e0; border-radius: 5px;" allowfullscreen=""></iframe>
+        </section>
+        <section class="container my-4">
+            <h3 class="col-md-6">Выберите маршрут:</h3>
+            <div class="row">
+                <table class="border border-black">
+                    <style type="text/css">
+                        table {
+                         background: gainsboro; 
+                         color: black; 
+                        }
+                        td {
+                         background: gainsboro; 
+                        }
+                       </style>
+                    <thead>
+                        <tr>
+                            <th class="p-3 border">Название</th>
+                            <th class="p-3 d-none d-md-table-cell border">О достопремичательности</th>
+                            <th class="p-3 d-none d-lg-table-cell border">Что стоит</th>
+                            <th class="p-3 border"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="routes-list">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="guidesSection" class="container my-4 d-none">
+            <h3 class="col-md-6">Гиды для этого маршрута: <span id=""></span></h3>
+            <div class="row">
+                <table class="border">
+                    <thead>
+                        <tr>
+                            <th class="p-3 border">Фото</th>
+                            <th class="p-3 d-none d-md-table-cell border">ФИО</th>
+                            <th class="p-3 d-none d-md-table-cell border">Язык</th>
+                            <th class="p-3 d-none d-md-table-cell border">Опыт работы</th>
+                            <th class="p-3 border">Цена услуг</th>
+                            <th class="p-3 border"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="guides-list">
+                    </tbody>
+                </table>
+            </div>
+            <button class="btn btn-success my-3" id="confirmOrderBtn" data-bs-toggle="modal" data-bs-target="#guideModal">>Оформить заявку</button>
+        </section>
+
+        <section class="modal fade" id="guideModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Опции</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container" id="order-body">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-danger" data-bs-dismiss="modal">Отменить</button>
+                        <button class="btn btn-outline-success" id="order-send">Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer mt-auto py-5 bg-secondary">
+        <div class="container text-light">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Обратная связь</h3>
+                    <ul class="list-unstyled">
+                        <li>1-Парковая, 13</li>
+                        <li>Телефон: +7 (999) 971 88-15</li>
+                        <li>E-Mail: kishievsemka2@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-8 text-end">
+                    <h3>Подписаться на рассылку</h3>
+                    <form class="row g-2">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control" id="emailInput" placeholder="Введите ваш e-mail">
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary">Подписаться</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
