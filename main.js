@@ -4,17 +4,6 @@ const key = 'a3f66b8e-3ca6-481a-8bc8-1052f9a12a1e';
 const currentPage = 1;
 const pageSize = 10;
 
-function pluralize(n, content) {
-    let result = content[2];
-    n = Math.abs(n) % 100;
-    let nt = n % 10;
-    if (n >= 10 && n <= 20) result = content[2];
-    else if (nt > 1 && nt < 5) result = content[0];
-    else if (nt == 1) result = content[1];
-
-    return `${n} ${result}`;
-}
-
 function showModal(guideId, guideName, guidePricePerHour, routeId, routeName, modal) {
     console.log(guideId, guideName, guidePricePerHour, routeId, routeName, modal);
     const orderCnt = document.getElementById('order-body');
